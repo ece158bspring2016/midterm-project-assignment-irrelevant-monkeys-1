@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ywS-re-6Q7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Uber-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LocationViewController" customModule="Uber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ie2-sx-jcn">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUL-uM-sa4">
+                                <rect key="frame" x="16" y="64" width="343" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8540 Costa Verde Blavd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngW-GN-gug">
+                                        <rect key="frame" x="78" y="21" width="186" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ngW-GN-gug" secondAttribute="trailing" constant="79" id="1Zc-n3-xaY"/>
+                                    <constraint firstAttribute="height" constant="64" id="4Tm-9G-Wbt"/>
+                                    <constraint firstItem="ngW-GN-gug" firstAttribute="leading" secondItem="gUL-uM-sa4" secondAttribute="leading" constant="78" id="Gpr-PV-8Pu"/>
+                                    <constraint firstItem="ngW-GN-gug" firstAttribute="top" secondItem="gUL-uM-sa4" secondAttribute="top" constant="21" id="Q3t-65-zMZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpq-Bl-UA4">
+                                <rect key="frame" x="16" y="617" width="343" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OD4-xP-56n"/>
+                                </constraints>
+                                <state key="normal" title="Request Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marker" translatesAutoresizingMaskIntoConstraints="NO" id="zUa-UV-5eN">
+                                <rect key="frame" x="165" y="311" width="45" height="45"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gUL-uM-sa4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="55C-VV-OjC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ie2-sx-jcn" secondAttribute="trailing" id="5wW-nQ-o2u"/>
+                            <constraint firstItem="Ie2-sx-jcn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="687-tu-NNN"/>
+                            <constraint firstItem="Xpq-Bl-UA4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Id-aw-RtO"/>
+                            <constraint firstItem="Ie2-sx-jcn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9fS-HT-Xqu"/>
+                            <constraint firstItem="Ie2-sx-jcn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DKE-YG-uM0"/>
+                            <constraint firstItem="Ie2-sx-jcn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QIH-bO-AJZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ie2-sx-jcn" secondAttribute="trailing" id="RQx-oa-JxR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ie2-sx-jcn" secondAttribute="bottom" id="SjT-Zy-7H7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ie2-sx-jcn" secondAttribute="trailing" id="XjW-tw-C83"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xpq-Bl-UA4" secondAttribute="trailing" id="ZEz-07-8t2"/>
+                            <constraint firstItem="Ie2-sx-jcn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bd5-ZJ-rds"/>
+                            <constraint firstItem="Ie2-sx-jcn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fgG-jt-Mmi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ie2-sx-jcn" secondAttribute="trailing" id="iWg-ML-0Bf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ie2-sx-jcn" secondAttribute="bottom" id="kcD-g1-QwY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xpq-Bl-UA4" secondAttribute="bottom" id="kkM-Vg-efY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gUL-uM-sa4" secondAttribute="trailing" id="twa-9C-jze"/>
+                            <constraint firstItem="gUL-uM-sa4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wV8-AC-6XV"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Uber" id="A4Q-ca-ChA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="address" destination="ngW-GN-gug" id="Ah4-Pe-XrY"/>
+                        <outlet property="mapView" destination="Ie2-sx-jcn" id="gD4-ax-84s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="801.5" y="-430.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZSm-zU-S4a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ywS-re-6Q7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="29Y-Io-F8v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fzj-9D-BnE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iB-EJ-Dt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="-430"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="marker" width="25" height="25"/>
+    </resources>
 </document>

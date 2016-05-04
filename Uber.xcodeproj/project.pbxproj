@@ -15,6 +15,9 @@
 		358DD7201CCBFAF3002C1777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 358DD71E1CCBFAF3002C1777 /* LaunchScreen.storyboard */; };
 		358DD72B1CCBFAF3002C1777 /* UberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD72A1CCBFAF3002C1777 /* UberTests.swift */; };
 		358DD7361CCBFAF3002C1777 /* UberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD7351CCBFAF3002C1777 /* UberUITests.swift */; };
+		358DD7441CCBFB1B002C1777 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358DD7431CCBFB1B002C1777 /* MapKit.framework */; };
+		358DD7461CCBFB35002C1777 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358DD7451CCBFB35002C1777 /* CoreLocation.framework */; };
+		358DD7481CCBFFD5002C1777 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD7471CCBFFD5002C1777 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		358DD7311CCBFAF3002C1777 /* UberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		358DD7351CCBFAF3002C1777 /* UberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberUITests.swift; sourceTree = "<group>"; };
 		358DD7371CCBFAF3002C1777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		358DD7431CCBFB1B002C1777 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		358DD7451CCBFB35002C1777 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		358DD7471CCBFFD5002C1777 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358DD7461CCBFB35002C1777 /* CoreLocation.framework in Frameworks */,
+				358DD7441CCBFB1B002C1777 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +87,8 @@
 		358DD7061CCBFAF3002C1777 = {
 			isa = PBXGroup;
 			children = (
+				358DD7451CCBFB35002C1777 /* CoreLocation.framework */,
+				358DD7431CCBFB1B002C1777 /* MapKit.framework */,
 				358DD7111CCBFAF3002C1777 /* Uber */,
 				358DD7291CCBFAF3002C1777 /* UberTests */,
 				358DD7341CCBFAF3002C1777 /* UberUITests */,
@@ -106,6 +116,7 @@
 				358DD71E1CCBFAF3002C1777 /* LaunchScreen.storyboard */,
 				358DD7211CCBFAF3002C1777 /* Info.plist */,
 				358DD7191CCBFAF3002C1777 /* Uber.xcdatamodeld */,
+				358DD7471CCBFFD5002C1777 /* LocationViewController.swift */,
 			);
 			path = Uber;
 			sourceTree = "<group>";
@@ -265,6 +276,7 @@
 				358DD71B1CCBFAF3002C1777 /* Uber.xcdatamodeld in Sources */,
 				358DD7151CCBFAF3002C1777 /* ViewController.swift in Sources */,
 				358DD7131CCBFAF3002C1777 /* AppDelegate.swift in Sources */,
+				358DD7481CCBFFD5002C1777 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
